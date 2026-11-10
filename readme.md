@@ -7,6 +7,15 @@ chmod +x start.sh stop.sh
 
 ----------------------------------------
 
+ssh-keygen -t ed25519 -C "oracle-cloud" -f ~/.ssh/oracle_key
+cp ~/.ssh/oracle_key.pub .
+cp ~/.ssh/oracle_key .  
+
+chmod 600 oracle_key
+ssh -i oracle_key ubuntu@129.225.93.102
+
+----------------------------------------
+
 cd ~/teleswap && cat > setup.sh <<'EOF'
 #!/bin/bash
 # Server setup for teleswap (Ubuntu 24.04). Skips anything already installed.
