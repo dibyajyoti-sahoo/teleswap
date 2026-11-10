@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "name": "teleswap",
+      "script": "/home/ubuntu/.local/bin/uv",
+      "args": "run telegram_message.py",
+      "cwd": "/home/ubuntu/teleswap",
+      "interpreter": "none"
+    }
+  ]
+}
