@@ -12,6 +12,10 @@ cp ~/.ssh/oracle_key.pub .
 cp ~/.ssh/oracle_key .  
 
 chmod 600 oracle_key
+
+dibyajyotisahoo@Dibyajyotis-MacBook-Air oracle-cloud % pwd
+/Users/dibyajyotisahoo/oracle-cloud
+
 ssh -i oracle_key ubuntu@129.225.93.102
 
 ----------------------------------------
