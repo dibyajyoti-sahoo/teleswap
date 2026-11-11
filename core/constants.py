@@ -31,6 +31,11 @@ class Settings:
         self.WHATSAPP_TOKEN = os.getenv("WHATSAPP_TOKEN")
         self.WHATSAPP_PHONE_NUMBER_ID = os.getenv("WHATSAPP_PHONE_NUMBER_ID")
         self.WHATSAPP_RECIPIENT = os.getenv("WHATSAPP_RECIPIENT")
+        # Approved template with one body variable {{1}}. If set, alerts are sent as
+        # template messages (delivered any time). If empty, falls back to free-form
+        # text (only delivered within 24h of the recipient messaging the business).
+        self.WHATSAPP_TEMPLATE_NAME = os.getenv("WHATSAPP_TEMPLATE_NAME", "").strip()
+        self.WHATSAPP_TEMPLATE_LANG = os.getenv("WHATSAPP_TEMPLATE_LANG", "en").strip()
 
     def update_telegram_session(self, session: str) -> bool:
         try:

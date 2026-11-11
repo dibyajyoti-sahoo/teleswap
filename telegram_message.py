@@ -46,8 +46,8 @@ async def handle_new_message(event):
         return
 
     if is_trade_alert(text):
-        logger.info("Alert emojis detected. Forwarding exact text to WhatsApp.")
-        await wa_client.send_text(text)
+        logger.info("Alert emojis detected. Forwarding to WhatsApp.")
+        await wa_client.send_alert(text)
     else:
         logger.info("Message did not contain alert emojis or spreadsheet. Skipped.")
 
